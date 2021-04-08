@@ -6,10 +6,14 @@
 int main()
 {
     int* ptr;
-    int rozmiarwsk;
+    int rozmiarwsk=1;
     std::cout << "Algorytm kolejki priorytetowej "<<std::endl;
-    std::cout << "Wprowadz rozmiar wiadomosci: ";
+    std::cout << "Wprowadz rozmiar wiadomosci(musi byc dodatni): ";
     std::cin >> rozmiarwsk;
+    while (rozmiarwsk <= 0){
+        std::cout << "Sprobuj jeszcze raz podac rozmiar widomosci (dodatnia liczba )";
+        std::cin >> rozmiarwsk;
+    }
     std::cout <<std::endl;
     ptr = new int[rozmiarwsk];
     srand(time(NULL));
